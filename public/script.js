@@ -1,10 +1,12 @@
-const socket = io("/");
+const socket = io(
+  "https://cesc-zoom-clone.herokuapp.com/6537ca9b-e1ad-4934-bd9e-b3da036663eb"
+); //Change to / for development
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const myPeer = new Peer(undefined, {
   path: "/peerjs",
   host:
-    "https://cesc-zoom-clone.herokuapp.com/6537ca9b-e1ad-4934-bd9e-b3da036663eb", //Change to / in development
+    "https://cesc-zoom-clone.herokuapp.com/6537ca9b-e1ad-4934-bd9e-b3da036663eb", //Change to / for development
   port: "3030",
 });
 const peers = {};
